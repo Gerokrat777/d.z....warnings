@@ -1,0 +1,20 @@
+import warnings
+
+
+
+def function_with_warning(a,b):
+
+    if a/b <= 0.01:
+        warnings.warn('предупреждение')
+        print(f'ВАЖНОЕ сообщение')
+    else:
+        print(f'предупреждение перехвачено как исключение: ')
+
+
+# a = 1
+# b = 100
+warnings.simplefilter('ignore')
+
+function_with_warning(a,b)
+
+
